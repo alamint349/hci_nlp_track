@@ -415,7 +415,8 @@
       : '';
     $('#foot').innerHTML = `
       <p>Dates come from each venue’s official call for papers where one exists. Rows marked Estimated are projected from the previous edition, so confirm on the official site before you plan around them.</p>
-      <p>${updated ? `Data last checked ${esc(updated)}. ` : ''}To add or correct a venue, change <code>${esc(SITE.dataUrl)}</code>${edit}. A date without a time counts down to 23:59 in the venue’s time zone.</p>`;
+      <p>${updated ? `Data last checked ${esc(updated)}. ` : ''}To add or correct a venue, change <code>${esc(SITE.dataUrl)}</code>${edit}. A date without a time counts down to 23:59 in the venue’s time zone.</p>
+      Copyright © 2026 Md Al Amin. All rights reserved.`;
   }
 
   // ── Calendar export ──────────────────────────────────────────────────
