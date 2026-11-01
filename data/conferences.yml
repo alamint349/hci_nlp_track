@@ -1,0 +1,315 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  HCI & NLP deadlines — data file
+#
+#  Every conference is one entry under `conferences:`. The site re-reads this
+#  file on every page load, so editing it on GitHub is all you need to update.
+#
+#  Fields
+#    id            unique slug, used for links (e.g. chi-2027)
+#    name, year    short name shown in bold ("CHI", 2027). Omit year for journals.
+#    field         hci | nlp
+#    full          full conference name
+#    rank          CORE rank if you want it shown (A*, A, …). Leave blank if unsure.
+#    place         city, country (or TBA)
+#    start, end    conference dates, YYYY-MM-DD. Or use `when:` for free text.
+#    link          official website
+#    timezone      default AoE (UTC-12). Also accepts UTC, UTC+9, UTC-7, …
+#    notification  optional, YYYY-MM-DD
+#    estimated     true = dates projected from last year (shown with ≈)
+#    rolling       true = no fixed deadline (submit any time)
+#    note          one or two sentences shown under "All dates"
+#    deadlines     list of { label, date, kind?, estimated?, timezone? }
+#                  date: YYYY-MM-DD (means 23:59) or "YYYY-MM-DD HH:MM"
+#                  kind: paper (default, main submission steps) or track
+#                        (posters, demos, panels, workshops; hidden unless
+#                        "Posters, demos and other tracks" is switched on)
+# ─────────────────────────────────────────────────────────────────────────────
+
+updated: 2026-11-01
+
+conferences:
+
+  # ───────────────────────────── HCI ─────────────────────────────
+
+  - id: chi-2027
+    name: CHI
+    year: 2027
+    field: hci
+    full: ACM CHI Conference on Human Factors in Computing Systems
+    rank: A*
+    place: Pittsburgh, USA
+    start: 2027-05-10
+    end: 2027-05-14
+    link: https://chi2027.acm.org/
+    notification: 2026-12-17
+    note: Papers above a threshold enter a revise-and-resubmit phase (reviews released 5 Nov 2026).
+    deadlines:
+      - label: Full papers
+        date: 2026-09-10
+      - label: Panels
+        date: 2026-11-19
+        kind: track
+      - label: Revise & resubmit (invited papers)
+        date: 2026-12-03
+      - label: Posters
+        date: 2027-01-21
+        kind: track
+
+  - id: chi-2028
+    name: CHI
+    year: 2028
+    field: hci
+    full: ACM CHI Conference on Human Factors in Computing Systems
+    rank: A*
+    place: TBA
+    link: https://chi.acm.org/
+    estimated: true
+    note: Projected from CHI 2027, whose papers were due on the second Thursday of September.
+    deadlines:
+      - label: Full papers
+        date: 2027-09-09
+
+  - id: uist-2027
+    name: UIST
+    year: 2027
+    field: hci
+    full: ACM Symposium on User Interface Software and Technology
+    rank: A*
+    place: TBA
+    link: https://uist.acm.org/
+    estimated: true
+    note: Projected from UIST 2026 (abstracts 24 Mar, papers 31 Mar).
+    deadlines:
+      - label: Abstracts
+        date: 2027-03-24
+      - label: Full papers
+        date: 2027-03-31
+
+  - id: cscw
+    name: CSCW
+    field: hci
+    full: ACM Conference on Computer-Supported Cooperative Work and Social Computing
+    rank: A
+    place: TBA
+    link: https://cscw.acm.org/rolling.html
+    rolling: true
+    note: CSCW now takes journal-style rolling submissions through Manuscript Central. Accepted papers appear in PACM HCI and are invited to the next CSCW.
+
+  - id: iui-2027
+    name: IUI
+    year: 2027
+    field: hci
+    full: ACM Conference on Intelligent User Interfaces
+    rank: A
+    place: Helsinki, Finland
+    start: 2027-02-08
+    end: 2027-02-11
+    link: https://iui.acm.org/2027/
+    notification: 2026-11-26
+    deadlines:
+      - label: Abstracts
+        date: 2026-08-13
+      - label: Full papers
+        date: 2026-08-20
+      - label: Posters & demos
+        date: 2026-11-10
+        kind: track
+
+  - id: iui-2028
+    name: IUI
+    year: 2028
+    field: hci
+    full: ACM Conference on Intelligent User Interfaces
+    rank: A
+    place: TBA
+    link: https://iui.acm.org/
+    estimated: true
+    note: Projected from IUI 2027 (abstracts 13 Aug, papers 20 Aug).
+    deadlines:
+      - label: Abstracts
+        date: 2027-08-12
+      - label: Full papers
+        date: 2027-08-19
+
+  - id: dis-2027
+    name: DIS
+    year: 2027
+    field: hci
+    full: ACM Designing Interactive Systems
+    rank: A
+    place: Stockholm, Sweden
+    start: 2027-06-28
+    link: https://dis.acm.org/2027/
+    notification: 2027-03-19
+    note: The DIS 2027 site lists these as provisional dates.
+    deadlines:
+      - label: Paper & pictorial abstracts
+        date: 2027-01-11
+      - label: Papers & pictorials
+        date: 2027-01-18
+      - label: Workshops
+        date: 2027-02-01
+        kind: track
+      - label: Interactivity & doctoral consortium
+        date: 2027-02-19
+        kind: track
+
+  - id: imwut
+    name: IMWUT
+    field: hci
+    full: Proc. ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (UbiComp / ISWC)
+    rank: A*
+    place: UbiComp / ISWC (next edition TBA)
+    link: https://dl.acm.org/journal/imwut
+    note: Three submission cycles a year (1 Feb, 1 May, 1 Nov). Accepted papers are invited to present at UbiComp / ISWC.
+    deadlines:
+      - label: Papers (November cycle)
+        date: 2026-11-01
+      - label: Papers (February cycle)
+        date: 2027-02-01
+      - label: Papers (May cycle)
+        date: 2027-05-01
+
+  - id: mobilehci-2027
+    name: MobileHCI
+    year: 2027
+    field: hci
+    full: ACM International Conference on Mobile Human-Computer Interaction
+    place: Limassol, Cyprus
+    start: 2027-09-20
+    end: 2027-09-23
+    link: https://mobilehci.acm.org/2027/
+    notification: 2027-04-15
+    deadlines:
+      - label: Abstracts
+        date: 2027-02-10
+      - label: Full papers
+        date: 2027-02-17
+
+  - id: assets-2027
+    name: ASSETS
+    year: 2027
+    field: hci
+    full: ACM SIGACCESS Conference on Computers and Accessibility
+    rank: A
+    place: TBA
+    link: https://www.sigaccess.org/
+    estimated: true
+    note: Projected from ASSETS 2026 (technical papers due 22 Apr).
+    deadlines:
+      - label: Technical papers
+        date: 2027-04-21
+
+  - id: vis-2027
+    name: IEEE VIS
+    year: 2027
+    field: hci
+    full: IEEE Visualization and Visual Analytics
+    rank: A*
+    place: TBA
+    link: https://ieeevis.org/
+    estimated: true
+    note: VIS has used 21 Mar for abstracts and 31 Mar for full papers for several years running.
+    deadlines:
+      - label: Abstracts
+        date: 2027-03-21
+      - label: Full papers
+        date: 2027-03-31
+
+  # ───────────────────────────── NLP ─────────────────────────────
+
+  - id: acl-2027
+    name: ACL
+    year: 2027
+    field: nlp
+    full: Annual Meeting of the Association for Computational Linguistics
+    rank: A*
+    place: Kyoto, Japan
+    start: 2027-08-17
+    end: 2027-08-22
+    link: https://2027.aclweb.org/
+    note: Reviewed through ACL Rolling Review. The commitment deadline has not been announced yet.
+    deadlines:
+      - label: ARR submission (January cycle)
+        date: 2027-01-04
+
+  - id: naacl-2027
+    name: NAACL
+    year: 2027
+    field: nlp
+    full: Annual Conference of the Nations of the Americas Chapter of the ACL
+    rank: A
+    place: San Francisco, USA
+    start: 2027-06-01
+    end: 2027-06-05
+    link: https://2027.naacl.org/
+    notification: 2027-02-10
+    note: Shares the October 2026 ARR cycle with COLING 2027. You pick one conference at commitment.
+    deadlines:
+      - label: ARR submission (October cycle)
+        date: 2026-10-12
+      - label: Commitment
+        date: 2026-12-23
+
+  - id: coling-2027
+    name: COLING
+    year: 2027
+    field: nlp
+    full: International Conference on Computational Linguistics
+    place: Macau, China
+    start: 2027-05-09
+    end: 2027-05-14
+    link: https://2027.coling-iccl.org/
+    notification: 2027-02-10
+    note: Shares the October 2026 ARR cycle with NAACL 2027. You pick one conference at commitment.
+    deadlines:
+      - label: ARR submission (October cycle)
+        date: 2026-10-12
+      - label: Commitment
+        date: 2026-12-23
+
+  - id: eacl-2027
+    name: EACL
+    year: 2027
+    field: nlp
+    full: Conference of the European Chapter of the ACL
+    rank: A
+    place: Athens, Greece
+    start: 2027-03-09
+    end: 2027-03-14
+    link: https://2027.eacl.org/
+    deadlines:
+      - label: ARR submission (August cycle)
+        date: 2026-08-03
+      - label: Commitment
+        date: 2026-10-11
+
+  - id: emnlp-2027
+    name: EMNLP
+    year: 2027
+    field: nlp
+    full: Conference on Empirical Methods in Natural Language Processing
+    rank: A*
+    place: Mexico or Central America (TBA)
+    when: Early November 2027 (tentative)
+    link: https://aclrollingreview.org/dates
+    estimated: true
+    note: Projected from EMNLP 2026, which took papers from the May ARR cycle.
+    deadlines:
+      - label: ARR submission (May cycle)
+        date: 2027-05-24
+
+  - id: colm-2027
+    name: COLM
+    year: 2027
+    field: nlp
+    full: Conference on Language Modeling
+    place: TBA
+    link: https://colmweb.org/
+    estimated: true
+    note: Projected from COLM 2025 (abstracts 20 Mar, papers 27 Mar).
+    deadlines:
+      - label: Abstracts
+        date: 2027-03-18
+      - label: Full papers
+        date: 2027-03-25

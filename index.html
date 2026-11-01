@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>HCI &amp; NLP deadlines</title>
+  <meta name="description" content="Live countdowns to paper deadlines for top HCI and NLP conferences, shown in your own time zone.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏳</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#list">Skip to the deadline list</a>
+
+  <header class="top wrap">
+    <div class="intro">
+      <h1>HCI &amp; NLP deadlines</h1>
+      <p class="lede">Countdowns for the top venues in human–computer interaction and natural language processing. Times are converted to <strong id="tz-name">your time zone</strong>; official deadlines are Anywhere on Earth unless noted.</p>
+    </div>
+    <section class="next" id="next" aria-live="off" aria-label="Next deadline"></section>
+  </header>
+
+  <main>
+    <section class="wrap tl-section" aria-labelledby="tl-heading">
+      <h2 id="tl-heading" class="section-title">The next twelve months</h2>
+      <div class="tl-scroll" id="timeline"></div>
+      <p class="tl-legend"><span><i class="lg-dot"></i>Confirmed date</span><span><i class="lg-dot hollow"></i>Estimated from last year</span><span>Bars run from abstract to full paper</span><span>Select a marker to jump to it</span></p>
+    </section>
+
+    <section class="wrap controls" aria-label="Filters">
+      <div class="seg" role="group" aria-label="Field">
+        <button type="button" data-field="all" aria-pressed="true">All</button>
+        <button type="button" data-field="hci" aria-pressed="false">HCI</button>
+        <button type="button" data-field="nlp" aria-pressed="false">NLP</button>
+      </div>
+      <label class="search">
+        <span class="visually-hidden">Search conferences</span>
+        <input id="q" type="search" placeholder="Search by name or city  ( / )" autocomplete="off">
+      </label>
+      <label class="check"><input type="checkbox" id="tracks"> Posters, demos and other tracks</label>
+      <label class="check"><input type="checkbox" id="starred"> Starred only</label>
+      <button type="button" class="btn" id="ics-all">Download calendar (.ics)</button>
+    </section>
+
+    <section class="wrap" aria-label="Upcoming deadlines">
+      <div id="list" tabindex="-1"></div>
+    </section>
+  </main>
+
+  <footer class="wrap foot" id="foot"></footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
